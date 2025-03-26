@@ -1,0 +1,363 @@
+﻿<Window
+    x:Class="JR.CodeGenerator.MainViwsModwl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:componets="clr-namespace:JR.CodeGenerator.Componets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:JR.CodeGenerator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:JR.CodeGenerator.Models"
+    Title="JR SQL To Code"
+    Width="924"
+    Height="672"
+    Background="Gray"
+    DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
+    mc:Ignorable="d">
+
+    <Grid Margin="5">
+        <Grid.Resources>
+            <Style TargetType="Border">
+                <Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,5">
+            <Grid.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="Padding" Value="5,5,5,5" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width=".5*" />
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="Conexion">
+                <Grid Margin="5">
+                    <Grid.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="Padding" Value="5,5,5,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="Server name" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        Text="{Binding ServerName}" />
+
+
+                    <CheckBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        Content="Seguridad integrada?"
+                        IsChecked="{Binding IsIntegrateSecurity}" />
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="User Name" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        IsEnabled="{Binding IsEnableUderPass}"
+                        Text="{Binding UserName}" />
+
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="Password" />
+                    <componets:BindablePasswordBox
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        IsEnabled="{Binding IsEnableUderPass}"
+                        Password="{Binding Password}" />
+                    <Button
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Command="{Binding ConctDBCommand}">
+                        Conectar
+                    </Button>
+
+                    <Label
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="Base de Datos" />
+                    <ComboBox
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        DisplayMemberPath="Name"
+                        ItemsSource="{Binding DataBases}"
+                        SelectedItem="{Binding SelectdataBases}"
+                        SelectedValuePath="Id" />
+
+
+
+                </Grid>
+            </GroupBox>
+
+            <GroupBox
+                Grid.Column="1"
+                Margin="3,0"
+                Header="Configuracion">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="Empresa" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        Text="{Binding Empresa, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="Autor" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        Text="{Binding Autor, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Content="NameSpace" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="0,3,0,3"
+                        Text="{Binding NameSpace, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Grid Grid.Row="3" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalAlignment="Right"
+                            Content="ToTitleCase?"
+                            ToolTip="Nomde de Campos" />
+                        <CheckBox
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,3,0,3"
+                            IsChecked="{Binding ToTitleCase}"
+                            ToolTip="Pone En Mayúsculas Cada Palabra De Los Campos Y Las Clases" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalAlignment="Right"
+                            Content="Dapper Class"
+                            ToolTip="Agrega Repositorio para Dapper y Services" />
+                        <CheckBox
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="0,3,0,3"
+                            IsChecked="{Binding IsDapper}"
+                            ToolTip="Nomde de Campos" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            HorizontalAlignment="Right"
+                            Content="Gen. Triggers"
+                            ToolTip="Genara scripts sql para craar triggers en la tabla para atralizar auditorias de Edicion y Eliminacion." />
+                        <CheckBox
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="0,3,0,3"
+                            IsChecked="{Binding IsCreateTrigger}"
+                            ToolTip="Nomde de Campos" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            Content="Script One File"
+                            ToolTip="Genara scripts sql para craar triggers en la tabla para atralizar auditorias de Edicion y Eliminacion." />
+                        <CheckBox
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            Margin="0,3,0,3"
+                            IsChecked="{Binding IsOneFileScript}"
+                            ToolTip="Nomde de Campos" />
+
+
+                    </Grid>
+
+
+
+                </Grid>
+            </GroupBox>
+
+            <Button
+                Grid.Column="2"
+                Height="40"
+                Margin="3,0"
+                VerticalAlignment="Bottom"
+                Command="{Binding GenerateCommand}"
+                Content="Generar Code" />
+
+
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Background="AliceBlue">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock
+                            Grid.Row="0"
+                            Padding="5,3"
+                            Text="Tablas y Vistas" />
+                        <TextBox
+                            Grid.Row="1"
+                            Margin="5,0"
+                            IsEnabled="{Binding IsEnableBuscar}"
+                            Text="{Binding TextBuscar, UpdateSourceTrigger=PropertyChanged}" />
+
+                    </Grid>
+
+
+
+
+                    <TreeView
+                        Grid.Row="1"
+                        Margin="0"
+                        Padding="0"
+                        ItemsSource="{Binding DataTables}">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+
+                                <CheckBox IsChecked="{Binding IsSelected}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image
+                                            Width="16"
+                                            Height="16"
+                                            Margin="0,0,3,0"
+                                            Source="{Binding ImageUri}" />
+                                        <TextBlock Text="{Binding}" />
+                                    </StackPanel>
+                                </CheckBox>
+
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Padding="5,0"
+                        Background="AliceBlue"
+                        Text="{Binding PathCode, StringFormat='El codigo se gererará en: {0}'}"
+                        TextWrapping="WrapWithOverflow" />
+
+                    <ScrollViewer Grid.Row="1" Background="#1e1e1e">
+                        <ListView Background="#1e1e1e" ItemsSource="{Binding Logs}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            Background="LightYellow"
+                                            Foreground="#6a6a5f"
+                                            Text="{Binding TableVista}" />
+                                        <TextBlock Foreground="{Binding Status}" Text="{Binding TableName, StringFormat=': {0}'}" />
+                                        <TextBlock Foreground="{Binding Status}" Text="{Binding ErrorMessage, StringFormat='  : {0}'}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

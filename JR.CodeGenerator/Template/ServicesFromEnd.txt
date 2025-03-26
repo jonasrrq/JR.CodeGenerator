@@ -1,0 +1,41 @@
+using GrupoCercasa.FrontEnd.WebApp.Services;
+using GrupoCercasa.Shared.Dto.Comunes;
+
+namespace GrupoCercasa.FrontEnd.WebApp.Service.Services;
+
+/// <summary>
+/// 
+/// </summary>
+/// <seealso cref="ServiceBase" />
+public class $TableName$Service : ServiceBase
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="$TableName$Service"/> class.
+    /// </summary>
+    /// <param name="http"></param>
+    public $TableName$Service(HttpClient http) : base(http)
+    {
+    }
+
+    public async Task<$TableName$DTO> GetAll()
+    {
+        return await GetAsync<$TableName$DTO>("$TableName$", "GetAll");
+    }
+
+    public async Task<$TableName$DTO> $TableName$ById(int Id)
+    {
+        return await GetAsync<$TableName$DTO>("$TableName$", $"GetById/{Id}");
+    }
+
+    public async Task<$TableName$DTO> Save($TableName$DTO entity)
+    {
+        return await PostAsync<$TableName$DTO,$TableName$DTO>("$TableName$", "Save", entity);
+    }
+    
+    public async Task<bool> Delete(int id)
+    {
+        return await DeleteAsync<int,bool>("$TableName$", "Delete", id);
+    }
+
+
+}

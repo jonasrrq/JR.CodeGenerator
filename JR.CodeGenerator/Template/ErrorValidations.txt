@@ -1,0 +1,38 @@
+﻿namespace $EspacioNombre$;
+
+/// <summary>
+/// The error validations.
+/// </summary>
+public class ErrorValidations : Exception
+{
+    /// <summary>
+    /// Gets the errors.
+    /// </summary>
+    /// <value>
+    /// The errors.
+    /// </value>
+    public List<Error> Errors { get; }
+
+    /// <summary>
+    /// Gets the messages.
+    /// </summary>
+    /// <value>
+    /// The messages.
+    /// </value>
+    public List<string> Messages
+    {
+        get
+        {
+            return Errors.Select(x => x.Message).ToList();
+        }
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ErrorValidations"/> class.
+    /// </summary>
+    /// <param name="errors">The errors.</param>
+    public ErrorValidations(List<Error> errors)
+    {
+        Errors = errors.ToList();
+    }
+}

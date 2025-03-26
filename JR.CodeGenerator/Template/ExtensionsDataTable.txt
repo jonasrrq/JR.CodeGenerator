@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Reflection;
+
+namespace $EspacioNombre$;
+
+// <summary>
+/// Extensions DataTable
+/// </summary>
+public static class ExtensionsDataTable
+{
+	/// <summary>
+	/// Converts to collection.
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="dt">The dt.</param>
+	/// <returns></returns>
+	public static List<T> ToCollection<T>(this DataTable dt)
+	{
+		List<T> lst = new List<T>();
+		Type tClass = typeof(T);
+		PropertyInfo[] pClass = tClass.GetProperties();
+		List<DataColumn> dc = dt.Columns.Cast<DataColumn>().ToList();
+		T cn;
+		foreach (DataRow item in dt.Rows)
+		{
+			cn = (T)Activator.CreateInstance(tClass);
+			foreach (PropertyInfo pc in pClass)
+			{
+				DataColumn d = dc.Find(c => c.ColumnName.Replace(" ", string.Empty).ToLower() == pc.Name.Replace(" ", string.Empty).ToLower());
+				if (d != null)
+				{
+					if (pc.PropertyType.Equals(typeof(string)))
+						pc.SetValue(cn, item[pc.Name].NullToString(), null);
+					else if (pc.PropertyType.Equals(typeof(Guid)))
+						pc.SetValue(cn, item[pc.Name].NullToGuid(), null);
+					else if (pc.PropertyType.Equals(typeof(int)))
+						pc.SetValue(cn, item[pc.Name].ToInt32(), null);
+					else if (pc.PropertyType.Equals(typeof(int?)))
+						pc.SetValue(cn, item[pc.Name].ToInt32Null(), null);
+					else if (pc.PropertyType.Equals(typeof(Int64)))
+						pc.SetValue(cn, item[pc.Name].ToInt64(), null);
+					else if (pc.PropertyType.Equals(typeof(bool)))
+						pc.SetValue(cn, item[pc.Name].NullToBool(), null);
+					else if (pc.PropertyType.Equals(typeof(decimal)))
+						pc.SetValue(cn, Convert.ToDecimal(item[pc.Name].ToDouble()), null);
+					else if (pc.PropertyType.Equals(typeof(double)))
+						pc.SetValue(cn, item[pc.Name].ToDouble(), null);						
+					else if (pc.PropertyType.Equals(typeof(DateTime)))
+						pc.SetValue(cn, Convert.ToDateTime(item[pc.Name]), null);
+					else if (pc.PropertyType.Equals(typeof(DateTime?)))
+						pc.SetValue(cn, item[pc.Name].ToDateNull(), null);
+					else if (pc.PropertyType.Equals(typeof(TimeSpan)))
+						pc.SetValue(cn, item[pc.Name].ToTimeSpan(), null);
+					else if (pc.PropertyType.Equals(typeof(byte[])))
+						pc.SetValue(cn, item[pc.Name].ToBytes(), null);
+				}
+			}
+			lst.Add(cn);
+		}
+		return lst;
+	}
+}

@@ -1,0 +1,172 @@
+﻿using System.Data.SqlClient;
+
+using AutoMapper;
+
+using GrupoCercasa.BackEnd.Data.Repository.ServicesRepository;
+using GrupoCercasa.BackEnd.Service.IServicesClient;
+using GrupoCercasa.BackEnd.Data.Service;
+using GrupoCercasa.Shared.Data;
+using GrupoCercasa.Shared.Dto.Comunes;
+using GrupoCercasa.Shared.Dto.ViewModels;
+
+namespace GrupoCercasa.BackEnd.Service.ServicesClient;
+
+/// <summary>
+/// 
+/// </summary>
+/// <seealso cref="I$TableName$Services" />
+public class $TableName$Services : I$TableName$Services
+{
+    private readonly ConnectionSQL _connection;
+    private readonly GlobalUserSession _userSession;
+    private readonly IMapper _mapper;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="$TableName$Services"/> class.
+    /// </summary>
+    /// <param name="connection">The connection.</param>
+    /// <param name="userSession">The user session.</param>
+    /// <param name="mapper">The mapper.</param>
+    public UserServices(ConnectionSQL connection, GlobalUserSession userSession, IMapper mapper)
+    {
+        _connection = connection;
+        _userSession = userSession;
+        _mapper = mapper;
+    }
+
+    #region Metodos Publicos
+    /// <summary>
+    /// Gets all.
+    /// </summary>
+    /// <returns></returns>
+    public async Task<List<$TableName$DTO>> GetAll() => await Get$TableName$();
+
+    /// <summary>
+    /// Gets the $TableName$ by identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    public async Task<$TableName$DTO> Get$TableName$ById(int Id) => await Get$TableName$(Id);
+
+    /// <summary>
+    /// Saves the specified entity.
+    /// </summary>
+    /// <param name="entity">The entity.</param>
+    /// <returns></returns>
+    public Task<PedidosDTO> Save(PedidosDTO entity) => SaveEntity(entity);
+
+
+    /// <summary>
+    /// Deletes the specified identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    public Task<bool> Delete(int Id) => DeleteEntity(Id);
+
+    #endregion
+
+   
+    #region Metodos Privados
+
+    /// <summary>
+    /// Gets $TableName$.
+    /// </summary>
+    /// <returns></returns>
+    private async Task<List<$TableName$DTO>> Get$TableName$()
+    {
+        List<$TableName$DTO> result = new List<$TableName$DTO>();
+        using (var db = new SqlConnection(_connection.GetConnectionString))
+        {
+            await db.OpenAsync();
+            var service = new $TableName$ServicesRepository(db);
+
+            var users = await service.SelectAllAsync();
+
+            result = _mapper.Map<List<$TableName$DTO>>(users);
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Gets the $TableName$.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    private async Task<$TableName$DTO> Get$TableName$(int Id)
+    {
+        $TableName$DTO result = new $TableName$DTO();
+        using (var db = new SqlConnection(_connection.GetConnectionString))
+        {
+            var $TableName$Rp = new $TableName$ServicesRepository(db);
+
+            var $TableName$_Result = await $TableName$Rp.SelectByIdAsync(Id);
+            result = _mapper.Map<$TableName$DTO>($TableName$_Result);
+
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Saves the entity.
+    /// </summary>
+    /// <param name="entityDTO">The entity.</param>
+    /// <returns></returns>
+    private async Task<$TableName$DTO> SaveEntity($TableName$DTO entityDTO)
+    {
+       var entity = _mapper.Map<$TableName$>(entityDTO);
+
+        entity.ToValitate();
+
+         using (var db = new SqlConnection(_connection.GetConnectionString))
+        {
+            await db.OpenAsync();
+
+            var servises = new $TableName$ServicesRepository(db, _userSession.UserSession.UserName);
+
+            if (entity.PedID == 0)
+            {
+                var id = await servises.InsertAsync(entity);
+                entityDTO.PedID = id;
+            }
+            else
+            {
+                await servises.UpdateAsync(entity);
+            }
+        }
+        
+        return entityDTO;
+
+    }
+
+    /// <summary>
+    /// Deletes the entity.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    /// <exception cref="ErrorValidations"></exception>
+    private async Task<bool> DeleteEntity(int Id)
+    {
+        bool result = false;
+
+        var validate = Get$TableName$ById(Id);
+
+        if (validate == null)
+        {
+            throw new ErrorValidations(new List<Shared.Data.Error>() { Shared.Data.Error.Create($"Delete {Id}","No encontrado") } );
+        }
+
+        using (var db = new SqlConnection(_connection.GetConnectionString))
+        {
+            var servises = new $TableName$ServicesRepository(db, _userSession.UserSession.UserName);
+            result = await servises.DeleteAsync(Id);
+        }
+
+        return result;
+    }
+
+    #endregion
+   
+
+
+}
+

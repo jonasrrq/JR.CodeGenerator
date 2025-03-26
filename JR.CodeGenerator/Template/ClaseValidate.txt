@@ -1,0 +1,25 @@
+﻿using GrupoCercasa.BackEnd.Data;
+using GrupoCercasa.Shared.Data;
+
+namespace $EspacioNombre$.Service;
+
+/// <summary>
+/// $TableName$Validate
+/// </summary>
+public static class $TableName$Validate
+{
+    /// <summary>
+    /// Converts to valitate.
+    /// </summary>
+    /// <param name="entity">The entity.</param>
+    /// <returns></returns>
+    /// <exception cref="GrupoCercasa.Shared.Data.ErrorValidations"></exception>
+    public static List<ErrorValidations> ToValitate(this $TableName$ entity)
+    {
+        List<Error> list = new List<Error>();
+
+        $Validations$
+
+        return list.Any()? throw new ErrorValidations(list) : null;
+    }
+}

@@ -1,0 +1,34 @@
+﻿//using GrupoCercasa.Shared.Dto.Comunes;
+using GrupoCercasa.Shared.Dto.Provicional;
+
+namespace GrupoCercasa.BackEnd.Service.IServicesClient;
+
+/// <summary>
+/// 
+/// </summary>
+public interface I$TableName$Services
+{
+    /// <summary>
+    /// Gets all.
+    /// </summary>
+    /// <returns></returns>
+    Task<List<$TableName$DTO>> GetAll();
+    /// <summary>
+    /// Gets the pedidos by identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    Task<$TableName$DTO> Get$TableName$ById(int Id);
+    /// <summary>
+    /// Saves the specified entity.
+    /// </summary>
+    /// <param name="entity">The entity.</param>
+    /// <returns></returns>
+    Task<$TableName$DTO> Save($TableName$DTO entity);    
+    /// <summary>
+    /// Deletes the specified identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    Task<bool> Delete(int Id);
+}

@@ -1,0 +1,212 @@
+﻿using System;
+
+namespace $EspacioNombre$;
+
+/// <summary>
+/// Extensions Convert
+/// </summary>
+public static class ExtensionsConvert
+{
+      /// <summary>
+      /// Converts to int32.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static Int32 ToInt32(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else
+               if (obj.ToString() == string.Empty)
+              return 0;
+          else
+              return Convert.ToInt32(obj);
+      }
+      /// <summary>
+      /// Converts to int32null.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static Int32? ToInt32Null(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else
+               if (obj.ToString() == string.Empty)
+              return 0;
+          else
+              return Convert.ToInt32(obj);
+      }
+      /// <summary>
+      /// Converts to int64.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static Int64 ToInt64(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else
+                  if (obj.ToString() == string.Empty)
+              return 0;
+          else
+              return Convert.ToInt64(obj);
+      }
+      /// <summary>
+      /// Converts to double.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static double ToDouble(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else
+                  if (obj.ToString() == string.Empty)
+              return 0;
+          else
+              return Convert.ToDouble(obj);
+      }
+      /// <summary>
+      /// Converts to decimal.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static decimal ToDecimal(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else
+                  if (obj.ToString() == string.Empty)
+              return 0;
+          else
+              return Convert.ToDecimal(obj);
+      }
+      /// <summary>
+      /// Converts to date.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static DateTime ToDate(this object obj)
+      {
+          if (obj == null)
+              return DateTime.Now;
+          else
+                  if (obj.ToString() == string.Empty)
+              return DateTime.Now;
+          else
+              return Convert.ToDateTime(obj);
+      }
+      /// <summary>
+      /// Converts to datenull.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static DateTime? ToDateNull(this object obj)
+      {
+          if (obj == null)
+              return null;
+          else
+                  if (obj.ToString() == string.Empty)
+              return null;
+          else
+              return Convert.ToDateTime(obj);
+      }
+      /// <summary>
+      /// Converts to timespan.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static TimeSpan ToTimeSpan(this object obj)
+      {
+          if (obj == null)
+              return TimeSpan.Zero;
+          else
+          if (obj.ToString() == string.Empty)
+              return TimeSpan.Zero;
+          else
+              return TimeSpan.Parse(obj.ToString());
+      }
+      /// <summary>
+      /// Nulls to string.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static string NullToString(this object obj)
+      {
+          if (obj == null)
+              return string.Empty;
+          else
+              return obj.ToString();
+      }
+      /// <summary>
+      /// Converts to boolint.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static int ToBoolInt(this object obj)
+      {
+          if (obj == null)
+              return 0;
+          else if (Convert.ToBoolean(obj))
+              return 1;
+          else
+              return 0;
+      }
+      /// <summary>
+      /// Nulls to bool.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static bool NullToBool(this object obj)
+      {
+          if (obj == null)
+              return false;
+          else if (obj.ToString() == string.Empty)
+              return false;
+          else
+              return Convert.ToBoolean(obj);
+      }
+      /// <summary>
+      /// Retorna True=Si y False=No
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static string ToBoolString(this object obj)
+      {
+          if (obj == null)
+              return "No";
+          else if (Convert.ToBoolean(obj))
+              return "Si";
+          else
+              return "No";
+      }
+      /// <summary>
+      /// Nulls to unique identifier.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static Guid NullToGuid(this object obj)
+      {
+          if (obj == null)
+              return new Guid();
+          else
+                  if (obj.ToString() == string.Empty)
+              return new Guid();
+          else
+              return (Guid)obj;
+      }
+      /// <summary>
+      /// Converts to bytes.
+      /// </summary>
+      /// <param name="obj">The object.</param>
+      /// <returns></returns>
+      public static byte[] ToBytes(this object obj)
+      {
+          if (obj == null)
+              return new byte[0];
+          else
+              return (byte[])obj;
+
+      }
+}

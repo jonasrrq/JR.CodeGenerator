@@ -1,0 +1,33 @@
+﻿using System.Data.SqlClient;
+using System.Data;
+
+using GrupoCercasa.BackEnd.Repository;
+using GrupoCercasa.BackEnd.Data;
+
+// NOTA: Debe tenet instalado el NuGet System.Data.SqlClient Version: 4.8.3 ó superior
+namespace $EspacioNombre$.Repository.ServicesRepository;
+
+/// <summary>
+/// $TableName$ Services Repository
+/// </summary>
+internal class $TableName$ServicesRepository : BaseRepository<$TableName$>
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="$TableName$ServicesRepository"/> class.
+    /// </summary>
+    /// <param name="conexion">The conexion.</param>
+    /// <param name="userNameAudit">The user name auditoria</param>
+    /// <param name="sqlTransaction">The SQL transaction.</param>
+    public $TableName$ServicesRepository (SqlConnection conexion, string userNameAudit = null, IDbTransaction sqlTransaction = null) :
+            base(conexion, userNameAudit, sqlTransaction)
+    {
+        QuerySelectByID = $"Select * From $TableName$ Where $Clave_Primaria$ = @Id";
+
+        NoQueryInsert = @"Insert into $TableName$ $FieldssInsert$"; 
+
+        NoQueryUpdate = @"Update $TableName$ 
+                            SET $FieldsUpdate$";
+                                
+        NoQueryDelete = $"delete from $TableName$ Where $Clave_Primaria$ = @Id";
+    }
+}

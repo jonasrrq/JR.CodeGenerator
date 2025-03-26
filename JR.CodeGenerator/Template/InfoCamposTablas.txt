@@ -1,0 +1,70 @@
+﻿SELECT TABLE_CATALOG
+	 , TABLE_SCHEMA
+	 , TABLE_NAME
+	 , COLUMN_NAME
+	 , ORDINAL_POSITION
+	 , COLUMN_DEFAULT
+	 , IS_NULLABLE
+	 , DATA_TYPE
+	 , CHARACTER_MAXIMUM_LENGTH
+	 , CHARACTER_OCTET_LENGTH
+	 , NUMERIC_PRECISION
+	 , NUMERIC_PRECISION_RADIX
+	 , NUMERIC_SCALE
+	 , DATETIME_PRECISION
+	 , CHARACTER_SET_CATALOG
+	 , CHARACTER_SET_SCHEMA
+	 , CHARACTER_SET_NAME
+	 , COLLATION_CATALOG
+	 , COLLATION_SCHEMA
+	 , COLLATION_NAME
+	 , DOMAIN_CATALOG
+	 , DOMAIN_SCHEMA
+	 , DOMAIN_NAME
+	 , COL_LENGTH('$TableName$', COLUMN_NAME) AS COLUMN_LENGTH
+	 , COLUMNPROPERTY(OBJECT_ID('$TableName$'), COLUMN_NAME, 'IsComputed') AS IS_COMPUTED
+	 , COLUMNPROPERTY(OBJECT_ID('$TableName$'), COLUMN_NAME, 'IsIdentity') AS IS_IDENTITY
+	 , COLUMNPROPERTY(OBJECT_ID('$TableName$'), COLUMN_NAME, 'IsRowGuidCol') AS IS_ROWGUIDCOL
+	 , Clave_Primaria =
+					   CASE
+						   WHEN c.COLUMN_NAME = (
+								   SELECT COLUMN_NAME
+								   FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS TC
+									   JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE CCU ON TC.TABLE_NAME = CCU.TABLE_NAME
+										   AND TC.CONSTRAINT_NAME = CCU.CONSTRAINT_NAME
+								   WHERE CCU.TABLE_NAME = c.TABLE_NAME
+									   AND TC.CONSTRAINT_TYPE = 'PRIMARY KEY'
+									   AND COLUMN_NAME = c.COLUMN_NAME
+							   ) THEN 'True'
+						   ELSE 'False'
+					   END
+	 , Clave_Foranea =
+					  CASE
+						  WHEN c.COLUMN_NAME = (
+								  SELECT COLUMN_NAME
+								  FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS TC
+									  JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE CCU ON TC.TABLE_NAME = CCU.TABLE_NAME
+										  AND TC.CONSTRAINT_NAME = CCU.CONSTRAINT_NAME
+								  WHERE CCU.TABLE_NAME = c.TABLE_NAME
+									  AND TC.CONSTRAINT_TYPE = 'FOREIGN KEY'
+									  AND COLUMN_NAME = c.COLUMN_NAME
+							  ) THEN 'True'
+						  ELSE 'False'
+					  END
+	 , (
+		   SELECT cd.value AS [column_desc]
+		   FROM sysobjects t
+			   INNER JOIN sysusers u ON u.uid = t.uid
+			   LEFT OUTER JOIN sys.extended_properties td ON td.major_id = t.id
+				   AND td.minor_id = 0
+				   AND td.name = 'MS_Description'
+			   INNER JOIN syscolumns co ON co.id = t.id
+			   LEFT OUTER JOIN sys.extended_properties cd ON cd.major_id = co.id
+				   AND cd.minor_id = co.colid
+				   AND cd.name = 'MS_Description'
+		   WHERE t.type = 'u'
+			   AND t.name = '$TableName$'
+			   AND co.name = c.COLUMN_NAME
+	   ) AS Campo_Descripcion
+FROM INFORMATION_SCHEMA.COLUMNS c
+WHERE (TABLE_NAME = '$TableName$') AND TABLE_SCHEMA = '$SchemaName$'

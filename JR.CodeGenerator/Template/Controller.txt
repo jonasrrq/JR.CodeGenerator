@@ -1,0 +1,111 @@
+﻿using System.Reflection;
+
+using GrupoCercasa.BackEnd.Api.Filters;
+using GrupoCercasa.BackEnd.Service.IServicesClient;
+using GrupoCercasa.Shared.Dto.Comunes;
+using GrupoCercasa.Shared.Dto.ViewModels.Pedidos;
+
+using Microsoft.AspNetCore.Mvc;
+
+using static GrupoCercasa.Shared.Dto.Authentication.PermissionEnums;
+
+namespace GrupoCercasa.BackEnd.Api.Controllers;
+
+/// <summary>
+/// $TableName$ Controller
+/// </summary>
+/// <seealso cref="ControllerBase" />
+[Route("api/[controller]")]
+[ApiController]
+public class $TableName$Controller : ControllerBase
+{
+    private readonly I$TableName$Services _service;
+    private readonly ILogger<$TableName$Controller> _logger;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="$TableName$Controller"/> class.
+    /// </summary>
+    /// <param name="service">The service.</param>
+    /// <param name="logger">The logger.</param>
+    public $TableName$Controller(I$TableName$Services service, ILogger<$TableName$Controller> logger)
+    {
+        _service = service;
+        _logger = logger;
+    }
+
+    /// <summary>
+    /// Gets all.
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("GetAll")]
+    [Authorize(PermissionItem.$TableName$, PermissionAction.Read)]
+    public async Task<ResponseHelper<List<$TableName$DTO>>> GetAll()
+    {
+        try
+        {
+            return new ResponseHelper<UserSession>(await _service.GetAll());
+        }
+        catch (Exception ex)
+        {
+           return ResultExceptions.GetResponseException<UserSession>(ex, _logger);
+        }
+    }
+
+    /// <summary>
+    /// $TableName$ the by identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    [HttpGet("GetById/{Id}")]
+    [Authorize(permissionItem: PermissionItem.$TableName$, PermissionAction.Read)]
+    public async Task<ResponseHelper<$TableName$DTO>> $TableName$ById(int Id)
+    {
+        try
+        {
+            return new ResponseHelper<UserSession>(await _service.Get$TableName$ById(Id));
+        }
+        catch (Exception ex)
+        {
+            return ResultExceptions.GetResponseException<UserSession>(ex, _logger, Id);
+        }
+    }
+
+    /// <summary>
+    /// Posts the save.
+    /// </summary>
+    /// <param name="entity">The entity.</param>
+    /// <returns></returns>
+    [HttpPost("Save")]
+    [Authorize(permissionItem: PermissionItem.$TableName$, PermissionAction.Create)]
+    public async Task<ResponseHelper<$TableName$DTO>> PostSave([FromBody] $TableName$DTO entity)
+    {
+        try
+        {
+            return new ResponseHelper<UserSession>(await _service.Save(entity));
+        }
+        catch (Exception ex)
+        {
+            return ResultExceptions.GetResponseException<UserSession>(ex, _logger, entity);
+        }
+    }    
+
+    /// <summary>
+    /// Deletes the specified identifier.
+    /// </summary>
+    /// <param name="Id">The identifier.</param>
+    /// <returns></returns>
+    [HttpDelete("Delete")]
+    [Authorize(permissionItem: PermissionItem.Pedido, PermissionAction.Delete)]
+    public async Task<ResponseHelper<bool>> Delete([FromBody] int Id)
+    {
+        try
+        {
+            return new ResponseHelper<UserSession>(await _service.Delete(Id));
+        }
+        catch (Exception ex)
+        {
+            return ResultExceptions.GetResponseException<UserSession>(ex, _logger, Id);
+        }
+    }
+
+}

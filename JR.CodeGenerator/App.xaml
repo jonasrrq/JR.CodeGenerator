@@ -1,0 +1,17 @@
+﻿<Application
+    x:Class="JR.CodeGenerator.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:JR.CodeGenerator">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <vm:ViewModelLocator xmlns:vm="clr-namespace:JR.CodeGenerator.ViewModels" x:Key="Locator" />
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

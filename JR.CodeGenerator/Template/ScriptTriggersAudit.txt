@@ -1,0 +1,188 @@
+﻿
+
+USE [$DataBaseName$]
+GO
+
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+
+	IF NOT EXISTS (SELECT * FROM sys.columns WHERE  object_id = OBJECT_ID(N'[$Schema$].[$TableName$]') AND name = 'AuditKey')
+	BEGIN
+		ALTER TABLE $Schema$.$TableName$ ADD
+			AuditKey nvarchar(50) NOT NULL CONSTRAINT DF_$TableName$_AuditKey DEFAULT (newid())
+		ALTER TABLE $Schema$.$TableName$ SET (LOCK_ESCALATION = TABLE)
+	END
+
+COMMIT
+GO
+
+
+CREATE OR ALTER TRIGGER  [$Schema$].[$TableName$_Delete_Trigger] ON $Schema$.[$TableName$] 
+FOR DELETE AS
+BEGIN
+--============  ESTO ES PARA VALUDAR =======================================
+	--DECLARE @User_Name VarChar(128) = 'JonasRQ'
+	--DECLARE @Ctx varbinary(128)
+	--SELECT @Ctx = CONVERT(varbinary(128), @User_Name)
+	--SET CONTEXT_INFO @Ctx
+--============  ESTO ES PARA VALUDAR =======================================
+
+	DECLARE @UserName nvarchar(50),			
+			@TableName nvarchar(450),
+			@AuditKey nvarchar(50),
+			@Accions nvarchar(max),
+			@Select nvarchar(max)
+			
+
+	SELECT @UserName = CONVERT(VarChar(128), CONTEXT_INFO())
+	IF @UserName is null SELECT	@UserName = system_user 
+
+	Select @TableName = OBJECT_NAME(parent_object_id)
+         FROM sys.objects 
+         WHERE sys.objects.name = OBJECT_NAME(@@PROCID)
+            AND SCHEMA_NAME(sys.objects.schema_id) = OBJECT_SCHEMA_NAME(@@PROCID)
+
+	--SELECT * INTO #TableNew FROM INSERTED
+	SELECT * INTO #TableOld FROM DELETED
+
+	Set @Select =  'WITH x(a) as (SELECT * FROM #TableOld FOR JSON AUTO)               
+						 Select @theID_OUT = convert(NVARCHAR(MAX),a) From x';  
+	
+	exec sp_executesql 
+		  @Select, 
+		  N'@theID_OUT nvarchar(max) OUTPUT', 
+		  @theID_OUT = @Accions OUTPUT;
+
+	Set @Accions = REPLACE(@Accions,'[','')
+	Set @Accions = REPLACE(@Accions,']','')
+
+	Select @AuditKey = AuditKey FROM DELETED
+
+	INSERT INTO [$DataBaseName$_Audit].[$Schema$].[Auditorias]
+           ([TableAuditKey]
+           ,[TableName]
+           ,[UserName]
+           ,[Fecha]
+           ,[Tipo]
+           ,[Acciones])
+    VALUES
+           (@AuditKey
+           ,@TableName
+           ,@UserName
+           ,GETDATE()
+           ,'Delete'
+          ,@Accions)
+
+END
+GO
+
+ALTER TABLE [$Schema$].[$TableName$] ENABLE TRIGGER [$TableName$_Delete_Trigger]
+GO
+
+
+CREATE OR ALTER TRIGGER  [$Schema$].[$TableName$_Update_Trigger] ON $Schema$.[$TableName$] 
+FOR UPDATE AS
+BEGIN
+--============  ESTO ES PARA VALUDAR =======================================
+	--DECLARE @User_Name VarChar(128) = 'JonasRQ'
+	--DECLARE @Ctx varbinary(128)
+	--SELECT @Ctx = CONVERT(varbinary(128), @User_Name)
+	--SET CONTEXT_INFO @Ctx
+--============  ESTO ES PARA VALUDAR =======================================
+
+	DECLARE @DatosTablas TABLE(COLUMN_NAME nvarchar(max), COLUMN_ID int);
+	DECLARE @UserName nvarchar(50),			
+			@TableName nvarchar(450),
+			@AuditKey nvarchar(50),
+			@Accions nvarchar(max),
+			@Select nvarchar(max) = '',
+			@Count int = 1,
+			@CountMax int = 1,
+			@CampoName NVARCHAR(MAX);			
+
+	SELECT @UserName = CONVERT(VarChar(128), CONTEXT_INFO())
+	IF @UserName is null SELECT	@UserName = system_user 
+
+	Select @TableName = OBJECT_NAME(parent_object_id)
+         FROM sys.objects 
+         WHERE sys.objects.name = OBJECT_NAME(@@PROCID)
+            AND SCHEMA_NAME(sys.objects.schema_id) = OBJECT_SCHEMA_NAME(@@PROCID)
+
+	SELECT * INTO #TableNew FROM INSERTED
+	SELECT * INTO #TableOld FROM DELETED	
+
+	INSERT INTO @DatosTablas
+	SELECT COLUMN_NAME, COLUMNPROPERTY(OBJECT_ID(TABLE_SCHEMA + '.' + TABLE_NAME), COLUMN_NAME, 'ColumnID') AS COLUMN_ID  
+	FROM INFORMATION_SCHEMA.COLUMNS  
+	WHERE TABLE_NAME = @TableName;  
+	Set @CountMax = @@rowcount;
+	WHILE(@Count <= @CountMax)
+	BEGIN
+		
+		--PRINT @CampoName
+		DECLARE @IsUpdate Bit,
+				@theSql as nvarchar(4000),
+				@ParmDefinition nvarchar(500);
+
+		Select @CampoName=  COLUMN_NAME From @DatosTablas Where COLUMN_ID = @Count;
+		SET @ParmDefinition = N'@theID_OUT bit OUTPUT';
+		SET @theSQL = N'Select @theID_OUT = COUNT(*) FROM #TableNew a, #TableOld b Where a.'+@CampoName+' <> b.'+@CampoName+''
+		--PRINT @theSQL
+		EXECUTE sp_executesql @theSQL, @ParmDefinition, @theID_OUT=@IsUpdate OUTPUT;
+		--PRINT 'El Campo: '+@CampoName+' es: '
+		--PRINT @IsUpdate
+		if @IsUpdate=1
+			if @Select = ''
+				Set @Select = @CampoName 
+			else
+				Set @Select = @Select + ',' + @CampoName 
+		--PRINT @Select 		
+		Set @Count = @Count + 1;
+	END
+
+	IF (@Select <> '')
+	BEGIN
+		 Set @Select =  'WITH x(a) as (SELECT ' + @Select + ' FROM #TableOld FOR JSON AUTO)               
+						 Select @theID_OUT = convert(NVARCHAR(MAX),a) From x';  
+	
+		 exec sp_executesql 
+				@Select, 
+				N'@theID_OUT nvarchar(max) OUTPUT', 
+				@theID_OUT = @Accions OUTPUT;
+
+		Set @Accions = REPLACE(@Accions,'[','')
+		Set @Accions = REPLACE(@Accions,']','')
+
+		Select @AuditKey = AuditKey FROM INSERTED
+
+		INSERT INTO [$DataBaseName$_Audit].[$Schema$].[Auditorias]
+           ([TableAuditKey]
+           ,[TableName]
+           ,[UserName]
+           ,[Fecha]
+           ,[Tipo]
+           ,[Acciones])
+     	VALUES
+           (@AuditKey
+           ,@TableName
+           ,@UserName
+           ,GETDATE()
+           ,'Update'
+          ,@Accions)
+
+	END
+	
+END
+GO
+
+ALTER TABLE [$Schema$].[$TableName$] ENABLE TRIGGER [$TableName$_Update_Trigger]
+GO

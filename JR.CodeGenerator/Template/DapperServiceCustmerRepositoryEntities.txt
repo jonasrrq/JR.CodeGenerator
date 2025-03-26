@@ -1,0 +1,22 @@
+﻿using GrupoCercasa.BackEnd.Data;
+using GrupoCercasa.BackEnd.Repository;
+
+using System.Data.SqlClient;
+
+
+namespace $EspacioNombre$.Repository.ServicesCustmerRepository;
+
+/// <summary>
+/// $TableName$ Services Custmer Repository
+/// </summary>
+internal class $TableName$ServicesCustmerRepository : BaseRepositoryCustomer<$TableName$>
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="$TableName$ServicesCustmerRepository"/> class.
+    /// </summary>
+    /// <param name="conexion">The conexion.</param>
+    /// <param name="querySelect"></param>
+    public $TableName$ServicesCustmerRepository (SqlConnection conexion, string querySelect = null) :
+            base(conexion, querySelect)
+    {}
+}
