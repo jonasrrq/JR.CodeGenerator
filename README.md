@@ -36,7 +36,7 @@ SDK .Net 9
 # Interface
 A continuación, se muestra una captura de pantalla de la interfaz del proyecto:
 
-![Interfaz del proyecto](documento/interface.png)
+![Interfaz del proyecto](document/interface.jpg)
 
 # Templates
 El proyecto incluye diversas plantillas para generar:
