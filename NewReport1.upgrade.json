@@ -1,0 +1,1841 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": true
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 9.0"
+  },
+  "analysisStartTime": "2025-04-07T13:51:26.1647918Z",
+  "analysisEndTime": "2025-04-07T13:51:27.5370367Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 5,
+      "incidents": 67,
+      "effort": 67
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 51,
+        "Optional": 1,
+        "Potential": 15,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 2,
+        "Project": 1,
+        "Api": 64
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 67,
+      "ruleInstances": [
+        {
+          "incidentId": "8e850c04-ca97-4a2e-9e67-6f22b73945e6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting, 6.0.1\n\nRecomendaci\u00F3n:\n\nMicrosoft.Extensions.Hosting 9.0.3",
+              "protected": "Microsoft.Extensions.Hosting, 6.0.1\n\nRecomendaci\u00F3n:\n\nMicrosoft.Extensions.Hosting 9.0.3"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+            "snippet": "Microsoft.Extensions.Hosting, 6.0.1\n\nRecomendaci\u00F3n:\n\nMicrosoft.Extensions.Hosting 9.0.3",
+            "protectedSnippet": "Microsoft.Extensions.Hosting, 6.0.1\n\nRecomendaci\u00F3n:\n\nMicrosoft.Extensions.Hosting 9.0.3",
+            "label": "Microsoft.Extensions.Hosting 6.0.1"
+          }
+        },
+        {
+          "incidentId": "2cae1c25-9a3e-49c1-ae16-c4f9163f2c04",
+          "ruleId": "NuGet.0004",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Data.SqlClient, 4.8.4",
+              "protected": "System.Data.SqlClient, 4.8.4"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+            "snippet": "System.Data.SqlClient, 4.8.4",
+            "protectedSnippet": "System.Data.SqlClient, 4.8.4",
+            "label": "System.Data.SqlClient 4.8.4"
+          }
+        },
+        {
+          "incidentId": "9cee573d-2027-4dcd-8eef-72455468193d",
+          "ruleId": "Project.0002",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Actual: net6.0-windows\nNuevo: net9.0-windows",
+              "protected": "Actual: net6.0-windows\nNuevo: net9.0-windows"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+            "snippet": "Actual: net6.0-windows\nNuevo: net9.0-windows",
+            "protectedSnippet": "Actual: net6.0-windows\nNuevo: net9.0-windows"
+          }
+        },
+        {
+          "incidentId": "3ac5726a-5577-4894-8d04-b28ea474dbd5",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Window",
+              "protected": "T:System.Windows.Window"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\MainWindow.xaml.cs",
+            "snippet": "Window",
+            "protectedSnippet": "T:System.Windows.Window",
+            "label": "T:System.Windows.Window",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window",
+                "isCustom": false
+              }
+            ],
+            "line": 7,
+            "column": 37
+          }
+        },
+        {
+          "incidentId": "ac18ec1c-a05d-482a-9395-d218b98eee1c",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "passwordBox.Password = Password;",
+              "protected": "T:System.Windows.Controls.PasswordBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "passwordBox.Password = Password;",
+            "protectedSnippet": "T:System.Windows.Controls.PasswordBox",
+            "label": "T:System.Windows.Controls.PasswordBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox",
+                "isCustom": false
+              }
+            ],
+            "line": 89,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "8944c3f8-8769-4e20-aff4-4baa1bd980b5",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Password = passwordBox.Password;",
+              "protected": "P:System.Windows.Controls.PasswordBox.Password"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "Password = passwordBox.Password;",
+            "protectedSnippet": "P:System.Windows.Controls.PasswordBox.Password",
+            "label": "P:System.Windows.Controls.PasswordBox.Password",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox.password",
+                "isCustom": false
+              }
+            ],
+            "line": 78,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "282b621d-e4f2-42a8-a0c7-d29d454ac952",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "IComponentConnector",
+              "protected": "T:System.Windows.Markup.IComponentConnector"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "IComponentConnector",
+            "protectedSnippet": "T:System.Windows.Markup.IComponentConnector",
+            "label": "T:System.Windows.Markup.IComponentConnector",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 106
+          }
+        },
+        {
+          "incidentId": "fe54e0ef-82ae-4699-bcbc-204b31b78944",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataTables = await db.GetSchemaAsync(\u0022Tables\u0022);\r\n\r\n            foreach (DataRow dataTable in dataTables.Rows)\r\n            {\r\n                if (dataTable[\u0022TABLE_NAME\u0022].ToString() == \u0022sysdiagrams\u0022)\r\n                    continue;\r\n\r\n                string squema = \u0022Tablas\u0022;\r\n                string imageUri = \u0022/Images/table.png\u0022;\r\n                if (dataTable[\u0022TABLE_TYPE\u0022].ToString() == \u0022VIEW\u0022)\r\n                {\r\n                    squema = \u0022Vistas\u0022;\r\n                    imageUri = \u0022/Images/view.png\u0022;\r\n                }\r\n\r\n                TableView children = new TableView()\r\n                {\r\n                    Schema = dataTable[\u0022TABLE_SCHEMA\u0022].ToString(),\r\n                    Name = dataTable[\u0022TABLE_NAME\u0022].ToString(),\r\n                    ImageUri = imageUri,\r\n                };\r\n\r\n                list.Where(x =\u003E x.Name == squema).First().Children.Add(children);\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\SQLServerService.cs",
+            "snippet": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataTables = await db.GetSchemaAsync(\u0022Tables\u0022);\r\n\r\n            foreach (DataRow dataTable in dataTables.Rows)\r\n            {\r\n                if (dataTable[\u0022TABLE_NAME\u0022].ToString() == \u0022sysdiagrams\u0022)\r\n                    continue;\r\n\r\n                string squema = \u0022Tablas\u0022;\r\n                string imageUri = \u0022/Images/table.png\u0022;\r\n                if (dataTable[\u0022TABLE_TYPE\u0022].ToString() == \u0022VIEW\u0022)\r\n                {\r\n                    squema = \u0022Vistas\u0022;\r\n                    imageUri = \u0022/Images/view.png\u0022;\r\n                }\r\n\r\n                TableView children = new TableView()\r\n                {\r\n                    Schema = dataTable[\u0022TABLE_SCHEMA\u0022].ToString(),\r\n                    Name = dataTable[\u0022TABLE_NAME\u0022].ToString(),\r\n                    ImageUri = imageUri,\r\n                };\r\n\r\n                list.Where(x =\u003E x.Name == squema).First().Children.Add(children);\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 75,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "5a277395-27a6-4a1d-891b-f391586396d8",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataTables = await db.GetSchemaAsync(\u0022Tables\u0022);\r\n\r\n            foreach (DataRow dataTable in dataTables.Rows)\r\n            {\r\n                if (dataTable[\u0022TABLE_NAME\u0022].ToString() == \u0022sysdiagrams\u0022)\r\n                    continue;\r\n\r\n                string squema = \u0022Tablas\u0022;\r\n                string imageUri = \u0022/Images/table.png\u0022;\r\n                if (dataTable[\u0022TABLE_TYPE\u0022].ToString() == \u0022VIEW\u0022)\r\n                {\r\n                    squema = \u0022Vistas\u0022;\r\n                    imageUri = \u0022/Images/view.png\u0022;\r\n                }\r\n\r\n                TableView children = new TableView()\r\n                {\r\n                    Schema = dataTable[\u0022TABLE_SCHEMA\u0022].ToString(),\r\n                    Name = dataTable[\u0022TABLE_NAME\u0022].ToString(),\r\n                    ImageUri = imageUri,\r\n                };\r\n\r\n                list.Where(x =\u003E x.Name == squema).First().Children.Add(children);\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\SQLServerService.cs",
+            "snippet": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataTables = await db.GetSchemaAsync(\u0022Tables\u0022);\r\n\r\n            foreach (DataRow dataTable in dataTables.Rows)\r\n            {\r\n                if (dataTable[\u0022TABLE_NAME\u0022].ToString() == \u0022sysdiagrams\u0022)\r\n                    continue;\r\n\r\n                string squema = \u0022Tablas\u0022;\r\n                string imageUri = \u0022/Images/table.png\u0022;\r\n                if (dataTable[\u0022TABLE_TYPE\u0022].ToString() == \u0022VIEW\u0022)\r\n                {\r\n                    squema = \u0022Vistas\u0022;\r\n                    imageUri = \u0022/Images/view.png\u0022;\r\n                }\r\n\r\n                TableView children = new TableView()\r\n                {\r\n                    Schema = dataTable[\u0022TABLE_SCHEMA\u0022].ToString(),\r\n                    Name = dataTable[\u0022TABLE_NAME\u0022].ToString(),\r\n                    ImageUri = imageUri,\r\n                };\r\n\r\n                list.Where(x =\u003E x.Name == squema).First().Children.Add(children);\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 75,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c94d2e19-775a-4236-a4ce-a317de8b9df9",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n\r\n                if (string.IsNullOrEmpty(_filds))\r\n                {\r\n                    _filds = $\u0022                            {_fieldName}\u0022;\r\n                    _parameters = $\u0022                            @{_fieldName}\u0022;\r\n                }\r\n                else\r\n                {\r\n                    _filds \u002B= $\u0022, {Environment.NewLine}                            {_fieldName}\u0022;\r\n                    _parameters \u002B= $\u0022, {Environment.NewLine}                            @{_fieldName}\u0022;\r\n                }\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n\r\n                if (string.IsNullOrEmpty(_filds))\r\n                {\r\n                    _filds = $\u0022                            {_fieldName}\u0022;\r\n                    _parameters = $\u0022                            @{_fieldName}\u0022;\r\n                }\r\n                else\r\n                {\r\n                    _filds \u002B= $\u0022, {Environment.NewLine}                            {_fieldName}\u0022;\r\n                    _parameters \u002B= $\u0022, {Environment.NewLine}                            @{_fieldName}\u0022;\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 138,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c82e7535-3dd5-438b-bba7-67e4c4e01d81",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            int i = 0;\r\n            foreach (var item in resultData)\r\n            {\r\n                i\u002B\u002B;\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n                if (campo != \u0022AuditKey\u0022)\r\n                {\r\n                    if (item.Character_Maximum_Length != 0)\r\n                    {\r\n                        result \u002B= i == 1 ? $\u0022if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022 : $\u0022        if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede esta vacio\\\u0022));{into}{into}\u0022;\r\n\r\n                        if (item.Character_Maximum_Length != -1)\r\n                        {\r\n                            result \u002B= $\u0022        if (entity.{campo}?.Length \u003E {item.Character_Maximum_Length}){into}\u0022;\r\n                            result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022La longitud de {campo} es invalida, Intente reduciendo el n\u00FAmero de caracteres\\\u0022));{into}{into}\u0022;\r\n                        }\r\n                    }\r\n\r\n                    if (item.Clave_Foranea)\r\n                    {\r\n                        result \u002B= $\u0022        if (entity.{campo} == 0){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede ser cero\\\u0022));{into}{into}\u0022;\r\n                    }\r\n                }\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            int i = 0;\r\n            foreach (var item in resultData)\r\n            {\r\n                i\u002B\u002B;\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n                if (campo != \u0022AuditKey\u0022)\r\n                {\r\n                    if (item.Character_Maximum_Length != 0)\r\n                    {\r\n                        result \u002B= i == 1 ? $\u0022if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022 : $\u0022        if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede esta vacio\\\u0022));{into}{into}\u0022;\r\n\r\n                        if (item.Character_Maximum_Length != -1)\r\n                        {\r\n                            result \u002B= $\u0022        if (entity.{campo}?.Length \u003E {item.Character_Maximum_Length}){into}\u0022;\r\n                            result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022La longitud de {campo} es invalida, Intente reduciendo el n\u00FAmero de caracteres\\\u0022));{into}{into}\u0022;\r\n                        }\r\n                    }\r\n\r\n                    if (item.Clave_Foranea)\r\n                    {\r\n                        result \u002B= $\u0022        if (entity.{campo} == 0){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede ser cero\\\u0022));{into}{into}\u0022;\r\n                    }\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 90,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "9a0f8d9f-d053-481f-b030-98bd397baf3b",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                result \u002B= \u0022\\t\\t ///\u003Csummary\u003E \u0022; //\u002B into;\r\n                //result \u002B= \u0022\\t\\t /// \u0022;\r\n                string s = item.Column_Name;\r\n                string p = Regex.Replace(s, \u0022([a-z](?=[A-Z0-9])|[A-Z](?=[A-Z][a-z]))\u0022, \u0022$1 \u0022).ToString();\r\n                result \u002B= \u0022Gets or sets the \u0022 \u002B p;\r\n\r\n                if (!string.IsNullOrEmpty(item.Campo_Descripcion))\r\n                {\r\n                    result \u002B= into;\r\n                    result \u002B= \u0022\\t\\t /// \u0022;\r\n                    result \u002B= item.Campo_Descripcion.Trim().Replace(\u0022\\r\\n\u0022, \u0022\\r\\n \\t\\t  ///\u0022);\r\n\r\n                }\r\n                //result \u002B= into;\r\n                // result \u002B= \u0022\\t\\t ///\u003C/summary\u003E \u0022 \u002B into;\r\n                result \u002B= \u0022 \u003C/summary\u003E \u0022 \u002B into;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                result \u002B= $\u0022\\t\\tpublic {clsSQLToCsharp.SQLToCsharp(item.Data_Type)} {campo} \u0022;\r\n\r\n                result \u002B= \u0022{get;set;}\u0022 \u002B into;\r\n                //result \u002B= clsSQLToCsharp.DefaultValue(item.Data_Type);//TODO: Validar si colocarlo\r\n            }\r\n\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                result \u002B= \u0022\\t\\t ///\u003Csummary\u003E \u0022; //\u002B into;\r\n                //result \u002B= \u0022\\t\\t /// \u0022;\r\n                string s = item.Column_Name;\r\n                string p = Regex.Replace(s, \u0022([a-z](?=[A-Z0-9])|[A-Z](?=[A-Z][a-z]))\u0022, \u0022$1 \u0022).ToString();\r\n                result \u002B= \u0022Gets or sets the \u0022 \u002B p;\r\n\r\n                if (!string.IsNullOrEmpty(item.Campo_Descripcion))\r\n                {\r\n                    result \u002B= into;\r\n                    result \u002B= \u0022\\t\\t /// \u0022;\r\n                    result \u002B= item.Campo_Descripcion.Trim().Replace(\u0022\\r\\n\u0022, \u0022\\r\\n \\t\\t  ///\u0022);\r\n\r\n                }\r\n                //result \u002B= into;\r\n                // result \u002B= \u0022\\t\\t ///\u003C/summary\u003E \u0022 \u002B into;\r\n                result \u002B= \u0022 \u003C/summary\u003E \u0022 \u002B into;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                result \u002B= $\u0022\\t\\tpublic {clsSQLToCsharp.SQLToCsharp(item.Data_Type)} {campo} \u0022;\r\n\r\n                result \u002B= \u0022{get;set;}\u0022 \u002B into;\r\n                //result \u002B= clsSQLToCsharp.DefaultValue(item.Data_Type);//TODO: Validar si colocarlo\r\n            }\r\n\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "20be7010-14a6-4cb7-b812-bf299cd65d64",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "protected override void OnStartup(StartupEventArgs e)",
+              "protected": "T:System.Windows.StartupEventArgs"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "protected override void OnStartup(StartupEventArgs e)",
+            "protectedSnippet": "T:System.Windows.StartupEventArgs",
+            "label": "T:System.Windows.StartupEventArgs",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.startupeventargs",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "1f148b68-08f1-434a-bb7b-bda65dee169a",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "base.OnStartup(e);",
+              "protected": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "base.OnStartup(e);",
+            "protectedSnippet": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)",
+            "label": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.onstartup",
+                "isCustom": false
+              }
+            ],
+            "line": 46,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "4c4c0de5-82bc-4eed-b199-944b75ef1647",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "IComponentConnector",
+              "protected": "T:System.Windows.Markup.IComponentConnector"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\MainWindow.g.i.cs",
+            "snippet": "IComponentConnector",
+            "protectedSnippet": "T:System.Windows.Markup.IComponentConnector",
+            "label": "T:System.Windows.Markup.IComponentConnector",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 86
+          }
+        },
+        {
+          "incidentId": "9abfb6d3-c595-49b9-a065-55a4058630b2",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+              "protected": "T:System.Windows.Controls.PasswordBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+            "protectedSnippet": "T:System.Windows.Controls.PasswordBox",
+            "label": "T:System.Windows.Controls.PasswordBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox",
+                "isCustom": false
+              }
+            ],
+            "line": 85,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "60bcfe02-00eb-4eb2-9a86-0d702a4428f8",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public App()\r\n    {\r\n        var host = Host.CreateDefaultBuilder()\r\n            .ConfigureServices(ConfigureServices)\r\n            .Build();\r\n        ServiceProvider = host.Services;\r\n\r\n    }",
+              "protected": "M:System.Windows.Application.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "public App()\r\n    {\r\n        var host = Host.CreateDefaultBuilder()\r\n            .ConfigureServices(ConfigureServices)\r\n            .Build();\r\n        ServiceProvider = host.Services;\r\n\r\n    }",
+            "protectedSnippet": "M:System.Windows.Application.#ctor",
+            "label": "M:System.Windows.Application.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.application",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "042e40ab-a552-4a4c-b047-b21e50de4a04",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public App()\r\n    {\r\n        var host = Host.CreateDefaultBuilder()\r\n            .ConfigureServices(ConfigureServices)\r\n            .Build();\r\n        ServiceProvider = host.Services;\r\n\r\n    }",
+              "protected": "M:System.Windows.Application.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "public App()\r\n    {\r\n        var host = Host.CreateDefaultBuilder()\r\n            .ConfigureServices(ConfigureServices)\r\n            .Build();\r\n        ServiceProvider = host.Services;\r\n\r\n    }",
+            "protectedSnippet": "M:System.Windows.Application.#ctor",
+            "label": "M:System.Windows.Application.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.application",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "6819c515-88ea-4c81-99b5-18351e52b7d9",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Application",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "Application",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 27
+          }
+        },
+        {
+          "incidentId": "86bbaec3-557f-4953-992c-0c2d6cc2e3ee",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainViwsModwl()\r\n    {\r\n        InitializeComponent();\r\n    }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\MainWindow.xaml.cs",
+            "snippet": "public MainViwsModwl()\r\n    {\r\n        InitializeComponent();\r\n    }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window.window",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "b4c631f4-55c6-4107-b81b-0d0de3956030",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+              "protected": "T:System.Windows.RoutedEventHandler"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+            "protectedSnippet": "T:System.Windows.RoutedEventHandler",
+            "label": "T:System.Windows.RoutedEventHandler",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.routedeventhandler",
+                "isCustom": false
+              }
+            ],
+            "line": 85,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "19367bde-8421-47b6-8aa6-656f073887b4",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)",
+              "protected": "T:System.Windows.RoutedEventArgs"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)",
+            "protectedSnippet": "T:System.Windows.RoutedEventArgs",
+            "label": "T:System.Windows.RoutedEventArgs",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs",
+                "isCustom": false
+              }
+            ],
+            "line": 75,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "29ee26c1-1db9-4e59-ad19-98a9c7cf7578",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return (string)GetValue(PasswordProperty);",
+              "protected": "T:System.Windows.DependencyProperty"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "return (string)GetValue(PasswordProperty);",
+            "protectedSnippet": "T:System.Windows.DependencyProperty",
+            "label": "T:System.Windows.DependencyProperty",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty",
+                "isCustom": false
+              }
+            ],
+            "line": 58,
+            "column": 18
+          }
+        },
+        {
+          "incidentId": "73ff23df-49d6-48c1-ba9b-ea62a95dd963",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "PasswordProperty =\r\n            DependencyProperty.Register(\u0022Password\u0022, typeof(string), typeof(BindablePasswordBox),\r\n                new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,\r\n                    PasswordPropertyChanged, null, false, UpdateSourceTrigger.PropertyChanged))",
+              "protected": "T:System.Windows.DependencyProperty"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "PasswordProperty =\r\n            DependencyProperty.Register(\u0022Password\u0022, typeof(string), typeof(BindablePasswordBox),\r\n                new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,\r\n                    PasswordPropertyChanged, null, false, UpdateSourceTrigger.PropertyChanged))",
+            "protectedSnippet": "T:System.Windows.DependencyProperty",
+            "label": "T:System.Windows.DependencyProperty",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty",
+                "isCustom": false
+              }
+            ],
+            "line": 32,
+            "column": 50
+          }
+        },
+        {
+          "incidentId": "9fab6d61-d320-4274-b329-0045b3aeaf5f",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BindablePasswordBox()\r\n        {\r\n            InitializeComponent();\r\n        }",
+              "protected": "M:System.Windows.Controls.UserControl.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "public BindablePasswordBox()\r\n        {\r\n            InitializeComponent();\r\n        }",
+            "protectedSnippet": "M:System.Windows.Controls.UserControl.#ctor",
+            "label": "M:System.Windows.Controls.UserControl.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.usercontrol.usercontrol",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "2d1ef27d-4c18-4cda-aa0f-a6a332f95747",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataBases = await db.GetSchemaAsync(\u0022DataBases\u0022);\r\n\r\n            foreach (DataRow dataBase in dataBases.Rows)\r\n            {\r\n                if ((Int16)dataBase[\u0022dbid\u0022] \u003E 4)\r\n                {\r\n                    list.Add(new DataBase((Int16)dataBase[\u0022dbid\u0022], dataBase[\u0022database_name\u0022].ToString()));\r\n                }\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\SQLServerService.cs",
+            "snippet": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataBases = await db.GetSchemaAsync(\u0022DataBases\u0022);\r\n\r\n            foreach (DataRow dataBase in dataBases.Rows)\r\n            {\r\n                if ((Int16)dataBase[\u0022dbid\u0022] \u003E 4)\r\n                {\r\n                    list.Add(new DataBase((Int16)dataBase[\u0022dbid\u0022], dataBase[\u0022database_name\u0022].ToString()));\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 361,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "a30b974f-dbaa-48f0-bb73-c5e35df2b3ef",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    if (string.IsNullOrEmpty(_where))\r\n                        _where = $\u0022                            WHERE {_fieldName} = @{_fieldName}\u0022;\r\n                    else\r\n                        _where \u002B= $\u0022 AND {_fieldName} = @{_fieldName}\u0022;\r\n\r\n                    continue;\r\n                }\r\n\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                if (string.IsNullOrEmpty(result))\r\n                    result \u002B= $\u0022                                {_fieldName}=@{_fieldName},\u0022;\r\n                else\r\n                    result \u002B= $\u0022{Environment.NewLine}                                {_fieldName}=@{_fieldName},\u0022;\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    if (string.IsNullOrEmpty(_where))\r\n                        _where = $\u0022                            WHERE {_fieldName} = @{_fieldName}\u0022;\r\n                    else\r\n                        _where \u002B= $\u0022 AND {_fieldName} = @{_fieldName}\u0022;\r\n\r\n                    continue;\r\n                }\r\n\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                if (string.IsNullOrEmpty(result))\r\n                    result \u002B= $\u0022                                {_fieldName}=@{_fieldName},\u0022;\r\n                else\r\n                    result \u002B= $\u0022{Environment.NewLine}                                {_fieldName}=@{_fieldName},\u0022;\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 177,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "02cd06b9-7a9f-469b-8cbe-b67295db7d5b",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n\r\n                if (string.IsNullOrEmpty(_filds))\r\n                {\r\n                    _filds = $\u0022                            {_fieldName}\u0022;\r\n                    _parameters = $\u0022                            @{_fieldName}\u0022;\r\n                }\r\n                else\r\n                {\r\n                    _filds \u002B= $\u0022, {Environment.NewLine}                            {_fieldName}\u0022;\r\n                    _parameters \u002B= $\u0022, {Environment.NewLine}                            @{_fieldName}\u0022;\r\n                }\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n\r\n                if (string.IsNullOrEmpty(_filds))\r\n                {\r\n                    _filds = $\u0022                            {_fieldName}\u0022;\r\n                    _parameters = $\u0022                            @{_fieldName}\u0022;\r\n                }\r\n                else\r\n                {\r\n                    _filds \u002B= $\u0022, {Environment.NewLine}                            {_fieldName}\u0022;\r\n                    _parameters \u002B= $\u0022, {Environment.NewLine}                            @{_fieldName}\u0022;\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 138,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "b74c9b0e-dede-4cb6-83e1-4d09ad416004",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                result \u002B= \u0022\\t\\t ///\u003Csummary\u003E \u0022; //\u002B into;\r\n                //result \u002B= \u0022\\t\\t /// \u0022;\r\n                string s = item.Column_Name;\r\n                string p = Regex.Replace(s, \u0022([a-z](?=[A-Z0-9])|[A-Z](?=[A-Z][a-z]))\u0022, \u0022$1 \u0022).ToString();\r\n                result \u002B= \u0022Gets or sets the \u0022 \u002B p;\r\n\r\n                if (!string.IsNullOrEmpty(item.Campo_Descripcion))\r\n                {\r\n                    result \u002B= into;\r\n                    result \u002B= \u0022\\t\\t /// \u0022;\r\n                    result \u002B= item.Campo_Descripcion.Trim().Replace(\u0022\\r\\n\u0022, \u0022\\r\\n \\t\\t  ///\u0022);\r\n\r\n                }\r\n                //result \u002B= into;\r\n                // result \u002B= \u0022\\t\\t ///\u003C/summary\u003E \u0022 \u002B into;\r\n                result \u002B= \u0022 \u003C/summary\u003E \u0022 \u002B into;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                result \u002B= $\u0022\\t\\tpublic {clsSQLToCsharp.SQLToCsharp(item.Data_Type)} {campo} \u0022;\r\n\r\n                result \u002B= \u0022{get;set;}\u0022 \u002B into;\r\n                //result \u002B= clsSQLToCsharp.DefaultValue(item.Data_Type);//TODO: Validar si colocarlo\r\n            }\r\n\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                result \u002B= \u0022\\t\\t ///\u003Csummary\u003E \u0022; //\u002B into;\r\n                //result \u002B= \u0022\\t\\t /// \u0022;\r\n                string s = item.Column_Name;\r\n                string p = Regex.Replace(s, \u0022([a-z](?=[A-Z0-9])|[A-Z](?=[A-Z][a-z]))\u0022, \u0022$1 \u0022).ToString();\r\n                result \u002B= \u0022Gets or sets the \u0022 \u002B p;\r\n\r\n                if (!string.IsNullOrEmpty(item.Campo_Descripcion))\r\n                {\r\n                    result \u002B= into;\r\n                    result \u002B= \u0022\\t\\t /// \u0022;\r\n                    result \u002B= item.Campo_Descripcion.Trim().Replace(\u0022\\r\\n\u0022, \u0022\\r\\n \\t\\t  ///\u0022);\r\n\r\n                }\r\n                //result \u002B= into;\r\n                // result \u002B= \u0022\\t\\t ///\u003C/summary\u003E \u0022 \u002B into;\r\n                result \u002B= \u0022 \u003C/summary\u003E \u0022 \u002B into;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                result \u002B= $\u0022\\t\\tpublic {clsSQLToCsharp.SQLToCsharp(item.Data_Type)} {campo} \u0022;\r\n\r\n                result \u002B= \u0022{get;set;}\u0022 \u002B into;\r\n                //result \u002B= clsSQLToCsharp.DefaultValue(item.Data_Type);//TODO: Validar si colocarlo\r\n            }\r\n\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "4260b7e1-68c1-4ca8-b7f6-050596de5132",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainViwsModwl()\r\n    {\r\n        InitializeComponent();\r\n    }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\MainWindow.xaml.cs",
+            "snippet": "public MainViwsModwl()\r\n    {\r\n        InitializeComponent();\r\n    }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window.window",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "39b7301b-0725-4cf8-8a18-2d1333933949",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "windows.Show();",
+              "protected": "M:System.Windows.Window.Show"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\App.xaml.cs",
+            "snippet": "windows.Show();",
+            "protectedSnippet": "M:System.Windows.Window.Show",
+            "label": "M:System.Windows.Window.Show",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.window.show",
+                "isCustom": false
+              }
+            ],
+            "line": 45,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c9b05652-2b85-4d2a-b320-c7b32b4ee76f",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "24ecd282-7a50-475d-91dd-d52f48538468",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "label": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.loadcomponent",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "30d6c3a2-83ee-4c68-b33f-289756038b72",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBoxResult"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBoxResult",
+            "label": "T:System.Windows.MessageBoxResult",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messageboxresult",
+                "isCustom": false
+              }
+            ],
+            "line": 261,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9bb31e69-c3df-4262-8cfd-8dc77adc90a2",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "M:System.Windows.MessageBox.Show(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "M:System.Windows.MessageBox.Show(System.String)",
+            "label": "M:System.Windows.MessageBox.Show(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox.show",
+                "isCustom": false
+              }
+            ],
+            "line": 261,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "f1aef745-c683-4b2f-8643-fc820e5dd4e6",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBoxResult"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBoxResult",
+            "label": "T:System.Windows.MessageBoxResult",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messageboxresult",
+                "isCustom": false
+              }
+            ],
+            "line": 240,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "4df8affe-af13-44f2-8bac-decb1fd94f15",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "M:System.Windows.MessageBox.Show(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "M:System.Windows.MessageBox.Show(System.String)",
+            "label": "M:System.Windows.MessageBox.Show(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox.show",
+                "isCustom": false
+              }
+            ],
+            "line": 240,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "609ed7fb-0eda-4360-a51c-da5ffb8d63d2",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+              "protected": "E:System.Windows.Controls.PasswordBox.PasswordChanged"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+            "protectedSnippet": "E:System.Windows.Controls.PasswordBox.PasswordChanged",
+            "label": "E:System.Windows.Controls.PasswordBox.PasswordChanged",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox.passwordchanged",
+                "isCustom": false
+              }
+            ],
+            "line": 85,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e83ce070-0359-4946-b60b-91ae99a862ae",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "SetValue(PasswordProperty, value);",
+              "protected": "M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty,System.Object)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "SetValue(PasswordProperty, value);",
+            "protectedSnippet": "M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty,System.Object)",
+            "label": "M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty,System.Object)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.setvalue",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 18
+          }
+        },
+        {
+          "incidentId": "80c27b63-9bbe-4174-88da-473f1e0488d9",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    result = item.Column_Name.ToLower().ToTitleCase();\r\n                    break;\r\n                }\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    result = item.Column_Name.ToLower().ToTitleCase();\r\n                    break;\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 218,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "181181b5-b7b7-4bcd-9bc1-6a2f2ef1d043",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\App.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "label": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.loadcomponent",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "c3fe6596-43a1-4581-83f5-c4b95caa87ab",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\App.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "675f0606-1d4d-4648-ac55-d15954fe819a",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.Run();",
+              "protected": "M:System.Windows.Application.Run"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\App.g.i.cs",
+            "snippet": "app.Run();",
+            "protectedSnippet": "M:System.Windows.Application.Run",
+            "label": "M:System.Windows.Application.Run",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.run",
+                "isCustom": false
+              }
+            ],
+            "line": 74,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "2af5e3c0-d074-44a6-bdf7-13795a09c87b",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "label": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application.loadcomponent",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "856531aa-cbb3-419f-9415-df6c257713f9",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)",
+              "protected": "T:System.Windows.DependencyPropertyChangedEventArgs"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)",
+            "protectedSnippet": "T:System.Windows.DependencyPropertyChangedEventArgs",
+            "label": "T:System.Windows.DependencyPropertyChangedEventArgs",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencypropertychangedeventargs",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "3ab31cd7-53ff-42b5-919b-0cae827397e8",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    if (string.IsNullOrEmpty(_where))\r\n                        _where = $\u0022                            WHERE {_fieldName} = @{_fieldName}\u0022;\r\n                    else\r\n                        _where \u002B= $\u0022 AND {_fieldName} = @{_fieldName}\u0022;\r\n\r\n                    continue;\r\n                }\r\n\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                if (string.IsNullOrEmpty(result))\r\n                    result \u002B= $\u0022                                {_fieldName}=@{_fieldName},\u0022;\r\n                else\r\n                    result \u002B= $\u0022{Environment.NewLine}                                {_fieldName}=@{_fieldName},\u0022;\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                _fieldName = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    if (string.IsNullOrEmpty(_where))\r\n                        _where = $\u0022                            WHERE {_fieldName} = @{_fieldName}\u0022;\r\n                    else\r\n                        _where \u002B= $\u0022 AND {_fieldName} = @{_fieldName}\u0022;\r\n\r\n                    continue;\r\n                }\r\n\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                if (string.IsNullOrEmpty(result))\r\n                    result \u002B= $\u0022                                {_fieldName}=@{_fieldName},\u0022;\r\n                else\r\n                    result \u002B= $\u0022{Environment.NewLine}                                {_fieldName}=@{_fieldName},\u0022;\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 177,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "bf682069-a5b2-4f5f-afe5-78cc04fff8c8",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            int i = 0;\r\n            foreach (var item in resultData)\r\n            {\r\n                i\u002B\u002B;\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n                if (campo != \u0022AuditKey\u0022)\r\n                {\r\n                    if (item.Character_Maximum_Length != 0)\r\n                    {\r\n                        result \u002B= i == 1 ? $\u0022if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022 : $\u0022        if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede esta vacio\\\u0022));{into}{into}\u0022;\r\n\r\n                        if (item.Character_Maximum_Length != -1)\r\n                        {\r\n                            result \u002B= $\u0022        if (entity.{campo}?.Length \u003E {item.Character_Maximum_Length}){into}\u0022;\r\n                            result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022La longitud de {campo} es invalida, Intente reduciendo el n\u00FAmero de caracteres\\\u0022));{into}{into}\u0022;\r\n                        }\r\n                    }\r\n\r\n                    if (item.Clave_Foranea)\r\n                    {\r\n                        result \u002B= $\u0022        if (entity.{campo} == 0){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede ser cero\\\u0022));{into}{into}\u0022;\r\n                    }\r\n                }\r\n            }\r\n        }",
+              "protected": "T:System.Data.SqlClient.SqlConnection"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            int i = 0;\r\n            foreach (var item in resultData)\r\n            {\r\n                i\u002B\u002B;\r\n                if (item.Is_Identity == 1)\r\n                    continue;\r\n\r\n                string campo = toTitleCase ? item.Column_Name.ToLower().ToTitleCase() : item.Column_Name.UpperFirstChar();\r\n                if (campo != \u0022AuditKey\u0022)\r\n                {\r\n                    if (item.Character_Maximum_Length != 0)\r\n                    {\r\n                        result \u002B= i == 1 ? $\u0022if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022 : $\u0022        if (string.IsNullOrWhiteSpace(entity.{campo})){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede esta vacio\\\u0022));{into}{into}\u0022;\r\n\r\n                        if (item.Character_Maximum_Length != -1)\r\n                        {\r\n                            result \u002B= $\u0022        if (entity.{campo}?.Length \u003E {item.Character_Maximum_Length}){into}\u0022;\r\n                            result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022La longitud de {campo} es invalida, Intente reduciendo el n\u00FAmero de caracteres\\\u0022));{into}{into}\u0022;\r\n                        }\r\n                    }\r\n\r\n                    if (item.Clave_Foranea)\r\n                    {\r\n                        result \u002B= $\u0022        if (entity.{campo} == 0){into}\u0022;\r\n                        result \u002B= $\u0022        list.Add(Error.Create(\\\u0022{campo}\\\u0022 ,\\\u0022{campo} no puede ser cero\\\u0022));{into}{into}\u0022;\r\n                    }\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "T:System.Data.SqlClient.SqlConnection",
+            "label": "T:System.Data.SqlClient.SqlConnection",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 90,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "310f0c24-9356-4cee-a38e-2500ed05e25f",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.passwordBox = ((System.Windows.Controls.PasswordBox)(target));",
+              "protected": "T:System.Windows.Controls.PasswordBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "this.passwordBox = ((System.Windows.Controls.PasswordBox)(target));",
+            "protectedSnippet": "T:System.Windows.Controls.PasswordBox",
+            "label": "T:System.Windows.Controls.PasswordBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox",
+                "isCustom": false
+              }
+            ],
+            "line": 82,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "25849a35-f051-4469-8294-a13dbdba9936",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Password = passwordBox.Password;",
+              "protected": "T:System.Windows.Controls.PasswordBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "Password = passwordBox.Password;",
+            "protectedSnippet": "T:System.Windows.Controls.PasswordBox",
+            "label": "T:System.Windows.Controls.PasswordBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox",
+                "isCustom": false
+              }
+            ],
+            "line": 78,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "cb20d64d-1d98-46ab-800a-afa80719586a",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return (string)GetValue(PasswordProperty);",
+              "protected": "M:System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "return (string)GetValue(PasswordProperty);",
+            "protectedSnippet": "M:System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)",
+            "label": "M:System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.getvalue",
+                "isCustom": false
+              }
+            ],
+            "line": 58,
+            "column": 18
+          }
+        },
+        {
+          "incidentId": "491738a1-cc5c-4053-b283-6bf424241382",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)",
+              "protected": "T:System.Windows.DependencyObject"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)",
+            "protectedSnippet": "T:System.Windows.DependencyObject",
+            "label": "T:System.Windows.DependencyObject",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "58fa129c-5d55-4b6a-824d-89b35a163fb6",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    result = item.Column_Name.ToLower().ToTitleCase();\r\n                    break;\r\n                }\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\ClaseMetodos.cs",
+            "snippet": "using (var db = new SqlConnection(_connectionString))\r\n        {\r\n            var resultData = await db.QueryAsync\u003CInfoCampo\u003E(query);\r\n            string _fieldName = string.Empty;\r\n\r\n            foreach (var item in resultData)\r\n            {\r\n                if (item.Clave_Primaria)\r\n                {\r\n                    result = item.Column_Name.ToLower().ToTitleCase();\r\n                    break;\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 218,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "33f9ae83-5350-4c7a-9fcc-771390cc2846",
+          "ruleId": "Api.0002",
+          "description": "La API est\u00E1 disponible en el paquete System.Data.SqlClient, 4.8.6.",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataBases = await db.GetSchemaAsync(\u0022DataBases\u0022);\r\n\r\n            foreach (DataRow dataBase in dataBases.Rows)\r\n            {\r\n                if ((Int16)dataBase[\u0022dbid\u0022] \u003E 4)\r\n                {\r\n                    list.Add(new DataBase((Int16)dataBase[\u0022dbid\u0022], dataBase[\u0022database_name\u0022].ToString()));\r\n                }\r\n            }\r\n        }",
+              "protected": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Services\\SQLServerService.cs",
+            "snippet": "using (var db = new SqlConnection(GetConnectionString))\r\n        {\r\n            await db.OpenAsync();\r\n            var dataBases = await db.GetSchemaAsync(\u0022DataBases\u0022);\r\n\r\n            foreach (DataRow dataBase in dataBases.Rows)\r\n            {\r\n                if ((Int16)dataBase[\u0022dbid\u0022] \u003E 4)\r\n                {\r\n                    list.Add(new DataBase((Int16)dataBase[\u0022dbid\u0022], dataBase[\u0022database_name\u0022].ToString()));\r\n                }\r\n            }\r\n        }",
+            "protectedSnippet": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "label": "M:System.Data.SqlClient.SqlConnection.#ctor(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.sqlconnection",
+                "isCustom": false
+              }
+            ],
+            "line": 361,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "842fd28d-3e4e-447a-bde3-9dcd87259872",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBox",
+            "label": "T:System.Windows.MessageBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox",
+                "isCustom": false
+              }
+            ],
+            "line": 240,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "5496c148-fb79-4db4-8b46-9cab321f183c",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+              "protected": "T:System.Windows.RoutedEventHandler"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "this.passwordBox.PasswordChanged \u002B= new System.Windows.RoutedEventHandler(this.PasswordBox_PasswordChanged);",
+            "protectedSnippet": "T:System.Windows.RoutedEventHandler",
+            "label": "T:System.Windows.RoutedEventHandler",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.routedeventhandler",
+                "isCustom": false
+              }
+            ],
+            "line": 85,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "ee1eee0a-fca3-4995-a13e-b9814e76ca4d",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "UserControl",
+              "protected": "T:System.Windows.Controls.UserControl"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "UserControl",
+            "protectedSnippet": "T:System.Windows.Controls.UserControl",
+            "label": "T:System.Windows.Controls.UserControl",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.usercontrol",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 47
+          }
+        },
+        {
+          "incidentId": "d0e9938e-8ea5-44a5-8b85-756721aa8c53",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBox",
+            "label": "T:System.Windows.MessageBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox",
+                "isCustom": false
+              }
+            ],
+            "line": 261,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "85b52535-9795-4459-ad57-d43a43091ab8",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "passwordBox.Password = Password;",
+              "protected": "P:System.Windows.Controls.PasswordBox.Password"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "passwordBox.Password = Password;",
+            "protectedSnippet": "P:System.Windows.Controls.PasswordBox.Password",
+            "label": "P:System.Windows.Controls.PasswordBox.Password",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox.password",
+                "isCustom": false
+              }
+            ],
+            "line": 89,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "af87b542-bcae-458e-bb81-6dbe0a545064",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "SetValue(PasswordProperty, value);",
+              "protected": "T:System.Windows.DependencyProperty"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "SetValue(PasswordProperty, value);",
+            "protectedSnippet": "T:System.Windows.DependencyProperty",
+            "label": "T:System.Windows.DependencyProperty",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 18
+          }
+        },
+        {
+          "incidentId": "d236aeb7-9d42-4e91-bb3e-00b3d92b9bac",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public BindablePasswordBox()\r\n        {\r\n            InitializeComponent();\r\n        }",
+              "protected": "M:System.Windows.Controls.UserControl.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\Componets\\BindablePasswordBox.xaml.cs",
+            "snippet": "public BindablePasswordBox()\r\n        {\r\n            InitializeComponent();\r\n        }",
+            "protectedSnippet": "M:System.Windows.Controls.UserControl.#ctor",
+            "label": "M:System.Windows.Controls.UserControl.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.usercontrol.usercontrol",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "510aee8b-38f2-4540-a8f4-7c5e99b54c7d",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "InternalTypeHelper",
+              "protected": "M:System.Windows.Markup.InternalTypeHelper.#ctor"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\GeneratedInternalTypeHelper.g.i.cs",
+            "snippet": "InternalTypeHelper",
+            "protectedSnippet": "M:System.Windows.Markup.InternalTypeHelper.#ctor",
+            "label": "M:System.Windows.Markup.InternalTypeHelper.#ctor",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.markup.internaltypehelper.internaltypehelper",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 76
+          }
+        },
+        {
+          "incidentId": "d4a6efaa-2404-4d56-b8ba-8e145b3f6ed4",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "InternalTypeHelper",
+              "protected": "T:System.Windows.Markup.InternalTypeHelper"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\GeneratedInternalTypeHelper.g.i.cs",
+            "snippet": "InternalTypeHelper",
+            "protectedSnippet": "T:System.Windows.Markup.InternalTypeHelper",
+            "label": "T:System.Windows.Markup.InternalTypeHelper",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.markup.internaltypehelper",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 76
+          }
+        },
+        {
+          "incidentId": "803a7fe6-fcd7-4b55-b977-26ffef2187b9",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBox",
+            "label": "T:System.Windows.MessageBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox",
+                "isCustom": false
+              }
+            ],
+            "line": 339,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e1a657fa-63c6-44c4-958b-f473f26aceee",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "T:System.Windows.MessageBoxResult"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "T:System.Windows.MessageBoxResult",
+            "label": "T:System.Windows.MessageBoxResult",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messageboxresult",
+                "isCustom": false
+              }
+            ],
+            "line": 339,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "ee875447-7670-440e-a715-6b186fecd9e2",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MessageBox.Show(ex.Message);",
+              "protected": "M:System.Windows.MessageBox.Show(System.String)"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\ViewModels\\MainViewModel.cs",
+            "snippet": "MessageBox.Show(ex.Message);",
+            "protectedSnippet": "M:System.Windows.MessageBox.Show(System.String)",
+            "label": "M:System.Windows.MessageBox.Show(System.String)",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.messagebox.show",
+                "isCustom": false
+              }
+            ],
+            "line": 339,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "2d8833f8-0058-49ab-9f4c-7260e97e199b",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.application",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "176711ad-43a2-4243-9af9-2b8c413ade7e",
+          "ruleId": "Api.0001",
+          "projectPath": "JR.CodeGenerator\\JR.CodeGenerator.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "passwordBox",
+              "protected": "T:System.Windows.Controls.PasswordBox"
+            },
+            "kind": "File",
+            "path": "JR.CodeGenerator\\obj\\Debug\\net6.0-windows\\Componets\\BindablePasswordBox.g.i.cs",
+            "snippet": "passwordBox",
+            "protectedSnippet": "T:System.Windows.Controls.PasswordBox",
+            "label": "T:System.Windows.Controls.PasswordBox",
+            "links": [
+              {
+                "title": "Documentaci\u00F3n de la API",
+                "url": "https://learn.microsoft.com/dotnet/api/system.windows.controls.passwordbox",
+                "isCustom": false
+              }
+            ],
+            "line": 46,
+            "column": 53
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "description": "Se recomienda actualizar el paquete NuGet para la plataforma de destino seleccionada.\n\nSe recomienda que los paquetes .NET est\u00E1ndar tengan versiones que coincidan con la versi\u00F3n de .NET de destino del proyecto.\n\nTambi\u00E9n se sabe que otros paquetes funcionan mejor para las plataformas de destino seleccionadas.",
+      "label": "Se recomienda actualizar el paquete NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "description": "El paquete NuGet contiene vulnerabilidades de seguridad.\n\nEl paquete debe actualizarse a una versi\u00F3n m\u00E1s reciente que solucione vulnerabilidades de seguridad conocidas.",
+      "label": "El paquete NuGet contiene una vulnerabilidad de seguridad.",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "El/los marco(s) de destino del proyecto deben cambiarse al nuevo marco de destino que seleccion\u00F3 para esta actualizaci\u00F3n.\n\nDurante la actualizaci\u00F3n, el marco de destino se ajustar\u00E1 a la plataforma correspondiente cuando proceda. En algunos casos, el proyecto dar\u00EDa como resultado varios marcos de destino despu\u00E9s de la actualizaci\u00F3n si usara caracter\u00EDsticas que ahora tienen sus propias plataformas en marcos .NET modernos (Windows, iOS, Android, etc.).",
+      "label": "Es necesario cambiar el marco de destino del proyecto",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Informaci\u00F3n general sobre la portabilidad de .NET Framework a .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": "SDK de proyecto .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "description": "La API no existe en la versi\u00F3n seleccionada de .NET. Consulte la documentaci\u00F3n de cambios importantes para obtener una funcionalidad alternativa o de reemplazo.",
+      "label": "La API no existe",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Cambios importantes en .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "description": "Algunas API que resid\u00EDan en versiones anteriores de marcos de trabajo de .NET se movieron a paquetes NuGet independientes que se pod\u00EDan agregar a los proyectos expl\u00EDcitamente.",
+      "label": "API disponible en el paquete NuGet",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Cambios importantes en .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
