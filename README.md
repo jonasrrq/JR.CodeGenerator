@@ -25,7 +25,14 @@ SDK .Net 6
 4. Personalice los nombres de las clases y propiedades si es necesario.
 5. Genere el código y guárdelo en su proyecto.
 
+# Interface
+A continuación, se muestra una captura de pantalla de la interfaz del proyecto:
+
+![Interfaz del proyecto](document/interface.jpg)
+
 # Contribute
 Si quieres contribuir con este proyecto, bienvenidas tus ideas.
+
+
 
 
